@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10110f">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Discover Lineage Barber Shop at Edgewater Shopping Centre. Fresh fades, clean cuts and walk-ins welcome. Call 08 6209 6183.">
+<title>Lineage Barber Shop | Edgewater</title>
+
+<style>
+:root{
+  --ink:#10110f;
+  --dark:#171915;
+  --panel:#20221d;
+  --gold:#c7a464;
+  --lightgold:#e3c995;
+  --cream:#f0ede4;
+  --muted:#b8b9ad;
+  --line:rgba(230,223,200,.18);
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:Arial,Helvetica,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{
+  margin:0;background:var(--ink);color:var(--cream);
+  font-family:var(--sans);-webkit-font-smoothing:antialiased;
+}
+body.modal-open{overflow:hidden}
+button,a{-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+img,video{max-width:100%;display:block}
+button{color:inherit}
+::selection{background:var(--gold);color:var(--ink)}
+:focus-visible{outline:3px solid var(--lightgold);outline-offset:6px}
+.skip{
+  position:fixed;top:10px;left:10px;z-index:100;
+  padding:14px;background:var(--cream);color:var(--ink);
+  transform:translateY(-160%);
+}
+.skip:focus{transform:translateY(0)}
+.wrap{width:min(1280px,calc(100% - 96px));margin:auto}
+.eyebrow{
+  display:flex;align-items:center;gap:13px;
+  text-transform:uppercase;letter-spacing:.23em;
+  font-size:10px;font-weight:700;line-height:1.7;
+}
+.eyebrow:before{content:"";width:30px;height:1px;background:currentColor}
+.gold{color:var(--gold)}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--serif);font-weight:400}
+h2{font-size:clamp(42px,5.5vw,78px);line-height:1.04;letter-spacing:-.055em}
+h2 em{font-weight:400;color:var(--gold)}
+.copy{font-size:16px;line-height:1.85;color:var(--muted)}
+.btn{
+  min-height:54px;display:inline-flex;align-items:center;
+  justify-content:center;gap:27px;padding:17px 25px;
+  border:1px solid var(--gold);background:var(--gold);
+  color:var(--ink);font-size:11px;font-weight:700;
+  letter-spacing:.13em;text-transform:uppercase;
+  transition:background .2s,transform .2s,color .2s;
+}
+.btn:hover{background:var(--lightgold);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.arrow{font-size:20px;line-height:1;font-weight:400}
+.text-link{
+  display:inline-flex;align-items:center;gap:30px;
+  padding-bottom:11px;border-bottom:1px solid var(--gold);
+  text-transform:uppercase;letter-spacing:.14em;
+  font-size:11px;font-weight:700;
+}
+
+/* HEADER */
+.topline{
+  background:var(--gold);color:var(--ink);text-align:center;
+  padding:9px 16px;font-size:9px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.18em;line-height:1.6;
+}
+header{
+  position:sticky;top:0;z-index:30;background:rgba(16,17,15,.96);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:84px;display:flex;justify-content:space-between;
+  align-items:center;gap:30px;
+}
+.brand{display:flex;align-items:center;gap:13px}
+.brand-symbol{color:var(--gold);font-size:33px;font-family:var(--serif)}
+.brand-name{
+  display:block;font-family:var(--serif);font-size:25px;
+  letter-spacing:.1em;line-height:1;
+}
+.brand-sub{
+  display:block;font-size:8px;letter-spacing:.3em;
+  color:var(--gold);margin-top:7px;text-transform:uppercase;
+}
+.desktop-nav{display:flex;align-items:center;gap:29px}
+.desktop-nav>a{
+  font-size:10px;text-transform:uppercase;letter-spacing:.13em;
+}
+.desktop-nav>a:hover{color:var(--gold)}
+.nav-call{
+  display:flex;align-items:center;gap:12px;font-size:12px;
+  border-left:1px solid var(--line);padding-left:26px;
+}
+.nav-call span{color:var(--gold)}
+.menu-toggle{
+  display:none;background:none;border:1px solid var(--line);
+  padding:12px;font-size:11px;letter-spacing:.1em;
+}
+.mobile-nav{
+  padding:8px 24px 24px;border-top:1px solid var(--line);
+}
+.mobile-nav[hidden]{display:none}
+.mobile-nav a{
+  display:block;padding:16px 0;border-bottom:1px solid var(--line);
+  font-size:13px;
+}
+
+/* HERO */
+.hero{position:relative;min-height:740px;height:calc(100svh - 117px);max-height:1080px;isolation:isolate}
+.hero-photo{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:50% 42%;z-index:-3;
+}
+.hero:before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:linear-gradient(90deg,rgba(10,12,10,.92) 0%,rgba(10,12,10,.72) 38%,rgba(10,12,10,.12) 82%);
+}
+.hero:after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(0deg,var(--ink),transparent 30%,rgba(0,0,0,.12));
+}
+.hero-inner{
+  height:100%;display:flex;flex-direction:column;
+  justify-content:center;align-items:flex-start;position:relative;
+  padding-top:45px;padding-bottom:100px;
+}
+.hero h1{
+  font-size:clamp(64px,8.5vw,124px);line-height:.94;
+  letter-spacing:-.065em;margin:29px 0;
+}
+.hero h1 em{display:block;font-weight:400;color:var(--lightgold)}
+.hero-copy{max-width:370px;color:#d0d0c6;font-size:15px;line-height:1.85}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero-bottom{
+  position:absolute;bottom:32px;left:0;right:0;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(255,255,255,.2);padding-top:21px;
+}
+.hero-bottom span,.hero-bottom a{
+  font-size:9px;letter-spacing:.17em;text-transform:uppercase;line-height:1.7;
+}
+.hero-bottom a{color:var(--gold)}
+.watch{
+  position:absolute;right:0;bottom:160px;display:flex;
+  align-items:center;gap:16px;background:none;border:0;
+  text-align:left;
+}
+.play{
+  display:grid;place-items:center;width:66px;height:66px;
+  border:1px solid rgba(255,255,255,.55);border-radius:50%;
+  background:rgba(15,17,14,.25);font-size:15px;
+  transition:background .2s,transform .2s;
+}
+.watch:hover .play{background:var(--gold);color:var(--ink);transform:scale(1.07)}
+.watch-label{font-size:10px;text-transform:uppercase;letter-spacing:.15em;line-height:1.9}
+.watch-label small{display:block;color:#c8c7bb;font-size:9px;letter-spacing:.07em}
+.ribbon{border-bottom:1px solid var(--line)}
+.ribbon-inner{
+  padding:27px 0;display:flex;justify-content:space-between;
+  align-items:center;gap:18px;
+}
+.ribbon-inner span{font-size:10px;text-transform:uppercase;letter-spacing:.2em}
+.ribbon-inner i{font-style:normal;color:var(--gold);font-size:18px}
+
+/* INTRO */
+.intro{padding:120px 0}
+.intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:100px;align-items:center}
+.intro h2{margin:22px 0 29px}
+.intro .copy{max-width:540px}
+.intro .text-link{margin-top:31px}
+.logo-frame{
+  position:relative;background:#000;border:1px solid var(--line);
+  padding:28px;
+}
+.logo-frame:before{
+  content:"";position:absolute;inset:12px;border:1px solid rgba(199,164,100,.32);
+  pointer-events:none;
+}
+.logo-frame img{width:100%;height:auto;object-fit:contain}
+.logo-caption{
+  display:flex;justify-content:space-between;gap:20px;
+  margin-top:16px;font-size:9px;color:var(--muted);
+  letter-spacing:.14em;text-transform:uppercase;
+}
+
+/* SERVICES */
+.services{background:var(--cream);color:var(--ink);padding:100px 0}
+.services-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:60px;margin-bottom:48px;
+}
+.services h2{margin-top:18px}
+.services-head p{max-width:290px;line-height:1.8;font-size:14px;color:#626457}
+.service{
+  display:grid;grid-template-columns:1fr 1fr 45px;
+  align-items:center;gap:40px;padding:33px 0;
+  border-top:1px solid rgba(16,17,15,.22);
+}
+.service:last-of-type{border-bottom:1px solid rgba(16,17,15,.22)}
+.service h3{font-size:39px;letter-spacing:-.04em}
+.service p{color:#626457;font-size:14px;line-height:1.8;max-width:420px}
+.service .service-arrow{
+  display:grid;place-items:center;width:44px;height:44px;
+  border:1px solid #c3b89f;border-radius:50%;font-size:22px;
+  transition:background .2s,transform .2s;
+}
+.service:hover .service-arrow{background:var(--gold);transform:rotate(-35deg)}
+.services-note{
+  margin-top:29px;display:flex;justify-content:space-between;
+  align-items:center;gap:24px;font-size:12px;color:#626457;line-height:1.7;
+}
+.services-note a{color:var(--ink);border-bottom:1px solid #a28753;padding-bottom:4px}
+
+/* SHOP */
+.shop{padding:110px 0 0}
+.section-head{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  gap:35px;margin-bottom:42px;
+}
+.section-head h2{margin-top:20px}
+.section-head p{max-width:315px}
+.shop-image{margin:0;position:relative}
+.shop-image img{width:100%;height:auto}
+.shop-image figcaption{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:20px 0;font-size:9px;
+  text-transform:uppercase;letter-spacing:.15em;color:var(--muted);
+}
+.shop-image figcaption span:last-child{color:var(--gold)}
+
+/* FILM */
+.film{padding:100px 0 120px}
+.film-grid{
+  display:grid;grid-template-columns:1fr .75fr;align-items:center;
+  gap:100px;max-width:1080px;margin:auto;
+}
+.film h2{margin:23px 0 26px}
+.film .copy{max-width:410px}
+.film .btn{margin-top:32px}
+.film-meta{
+  display:flex;gap:30px;margin-top:40px;padding-top:23px;
+  border-top:1px solid var(--line);
+  color:var(--muted);font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+}
+.video-shell{
+  position:relative;background:#000;border:1px solid var(--line);
+  padding:10px;box-shadow:25px 25px 0 #1a1d17;
+}
+.video-shell video{
+  aspect-ratio:9/16;width:100%;height:auto;object-fit:contain;background:#000;
+}
+.video-shell:before{
+  content:"LINEAGE / EDGEWATER";position:absolute;left:-29px;top:0;
+  writing-mode:vertical-rl;transform:rotate(180deg);
+  font-size:9px;letter-spacing:.22em;color:var(--gold);
+}
+.video-help{font-size:11px;color:var(--muted);line-height:1.7;margin-top:21px}
+.video-help a{text-decoration:underline;text-underline-offset:3px}
+
+/* VISIT */
+.visit{background:#24281f;padding:105px 0}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px}
+.visit h2{margin:22px 0 29px}
+.visit .copy{max-width:400px}
+.visit .btn{margin-top:31px}
+.visit-details{padding-top:7px}
+.detail{padding:24px 0;border-bottom:1px solid var(--line)}
+.detail:first-child{padding-top:0}
+.detail-label{
+  display:block;font-size:9px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:12px;
+}
+.detail p,.detail>a{font-size:20px;line-height:1.6}
+.detail small{display:block;color:var(--muted);font-size:12px;line-height:1.8;margin-top:7px}
+.detail .phone{font-family:var(--serif);font-size:36px;letter-spacing:-.03em}
+.visit-links{display:flex;flex-wrap:wrap;gap:25px;margin-top:26px}
+.visit-links a{font-size:11px;text-decoration:underline;text-underline-offset:6px}
+
+/* FAQ */
+.faq{padding:100px 0}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:100px}
+.faq h2{margin-top:21px;font-size:clamp(39px,4vw,59px)}
+details{border-bottom:1px solid var(--line)}
+details:first-child{border-top:1px solid var(--line)}
+summary{
+  cursor:pointer;list-style:none;padding:24px 35px 24px 0;
+  font-size:15px;line-height:1.6;position:relative;
+}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:3px;top:20px;color:var(--gold);font-size:25px}
+details[open] summary:after{content:"−"}
+details p{color:var(--muted);font-size:14px;line-height:1.85;padding-bottom:24px;max-width:540px}
+details p a{color:var(--gold);text-decoration:underline;text-underline-offset:4px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:52px 0 28px;overflow:hidden}
+.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:center}
+.footer-top p{font-family:var(--serif);font-size:28px;font-style:italic;color:var(--gold)}
+.footer-word{
+  font-family:var(--serif);font-size:clamp(70px,18vw,260px);
+  line-height:1.08;letter-spacing:.015em;text-align:center;
+  margin:38px 0 17px;color:#2c3026;user-select:none;
+}
+.footer-bottom{
+  border-top:1px solid var(--line);padding-top:22px;
+  display:flex;justify-content:space-between;gap:18px;
+  color:var(--muted);font-size:10px;line-height:1.8;
+}
+.footer-bottom a{color:var(--gold)}
+.mobile-bar{display:none}
+
+/* VIDEO DIALOG */
+dialog{
+  border:1px solid var(--line);padding:0;background:#090a08;
+  color:var(--cream);width:min(450px,calc(100% - 32px));
+  max-height:92svh;overflow:auto;
+}
+dialog::backdrop{background:rgba(0,0,0,.88)}
+.dialog-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 17px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+}
+.dialog-close{background:none;border:1px solid var(--line);padding:9px 12px;font-size:12px}
+dialog video{max-height:76svh;width:100%;background:#000}
+
+/* OPTIONAL REVEAL */
+.reveal.ready{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.ready.visible{opacity:1;transform:none}
+
+@media(min-width:1500px){
+  .hero h1{font-size:140px}
+}
+@media(max-width:1050px){
+  .wrap{width:calc(100% - 56px)}
+  .desktop-nav{gap:18px}
+  .nav-call{padding-left:17px}
+  .intro-grid,.film-grid,.visit-grid,.faq-grid{gap:50px}
+  .hero{min-height:690px}
+  .watch{bottom:135px}
+}
+@media(max-width:760px){
+  html{scroll-padding-top:84px}
+  .wrap{width:calc(100% - 40px)}
+  .topline{font-size:8px;letter-spacing:.12em}
+  .nav{min-height:73px;gap:15px}
+  .brand-name{font-size:21px}
+  .brand-symbol{font-size:28px}
+  .brand-sub{font-size:7px}
+  .desktop-nav{display:none}
+  .menu-toggle{display:block}
+  .hero{height:auto;min-height:760px}
+  .hero-photo{object-position:40% center}
+  .hero:before{background:linear-gradient(90deg,rgba(10,12,10,.86),rgba(10,12,10,.4))}
+  .hero:after{background:linear-gradient(0deg,var(--ink),transparent 40%)}
+  .hero-inner{min-height:760px;padding:65px 0 170px;justify-content:flex-start}
+  .hero h1{font-size:clamp(65px,13.4vw,100px);margin:24px 0}
+  .hero-copy{max-width:310px;font-size:14px}
+  .hero-actions{gap:10px;margin-top:27px}
+  .btn{padding:16px 19px;gap:18px;font-size:10px}
+  .watch{left:0;right:auto;bottom:100px}
+  .play{width:46px;height:46px}
+  .watch-label{font-size:9px}
+  .hero-bottom{bottom:22px;gap:15px;padding-top:16px}
+  .hero-bottom span,.hero-bottom a{font-size:8px;letter-spacing:.1em}
+  .ribbon-inner{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:25px 0}
+  .ribbon-inner span{font-size:9px;letter-spacing:.13em;text-align:center}
+  .ribbon-inner i{display:none}
+  .intro,.services,.visit,.faq{padding:75px 0}
+  .intro-grid,.film-grid,.visit-grid,.faq-grid{grid-template-columns:1fr;gap:43px}
+  .intro h2{max-width:450px}
+  .logo-frame{max-width:390px;margin:auto}
+  .logo-caption{max-width:390px;margin:16px auto 0}
+  .services-head,.section-head{display:block}
+  .services-head p,.section-head p{margin-top:24px;max-width:420px}
+  .service{grid-template-columns:1fr 42px;gap:15px;padding:26px 0}
+  .service h3{font-size:32px}
+  .service p{grid-column:1;grid-row:2;font-size:13px}
+  .service-arrow  {grid-column:2;grid-row:1 / 3}
+  .services-note{align-items:flex-start;flex-direction:column}
+  .shop{padding-top:75px}
+  .shop-image figcaption{align-items:flex-start;font-size:8px;line-height:1.8}
+  .film{padding:65px 0 85px}
+  .film-grid{gap:45px}
+  .film-meta{gap:18px;flex-wrap:wrap}
+  .video-shell{width:min(340px,calc(100% - 20px));margin:auto}
+  .video-help{max-width:340px;margin:24px auto 0}
+  .visit-details{padding-top:0}
+  .detail p,.detail>a{font-size:18px}
+  .footer-top{flex-direction:column;align-items:flex-start}
+  .footer-top p{font-size:24px}
+  .footer-bottom{flex-direction:column;gap:9px}
+  footer{padding-bottom:100px}
+  .mobile-bar{
+    position:fixed;bottom:0;left:0;right:0;z-index:35;
+    display:grid;grid-template-columns:1fr 1fr;
+    background:var(--ink);border-top:1px solid var(--gold);
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .mobile-bar a{
+    padding:19px 12px;text-align:center;font-size:10px;
+    font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  }
+  .mobile-bar a:first-child{background:var(--gold);color:var(--ink)}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{
+    animation:none!important;transition:none!important;
+  }
+  .reveal.ready{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topline">
+  Edgewater Shopping Centre &nbsp; · &nbsp; Walk-ins welcome
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Lineage Barber Shop home">
+      <span class="brand-symbol" aria-hidden="true">♛</span>
+      <span>
+        <span class="brand-name">LINEAGE</span>
+        <span class="brand-sub">Barber Shop · Edgewater</span>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#about">The shop</a>
+      <a href="#services">The cut</a>
+      <a href="#film">The film</a>
+      <a href="#visit">Find us</a>
+      <a class="nav-call" href="tel:+61862096183">
+        <span aria-hidden="true">↗</span> 08 6209 6183
+      </a>
+    </nav>
+
+    <button class="menu-toggle" id="menu-toggle"
+      aria-expanded="false" aria-controls="mobile-nav">
+      MENU
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav"
+    aria-label="Mobile navigation" hidden>
+    <a href="#about">The shop</a>
+    <a href="#services">The cut</a>
+    <a href="#film">Watch the film</a>
+    <a href="#visit">Find us in Edgewater</a>
+    <a href="tel:+61862096183">Call 08 6209 6183</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <img class="hero-photo" src="1000007726.jpg"
+      alt="Brown leather and gold barber chairs inside Lineage Barber Shop"
+      width="1536" height="1152" fetchpriority="high">
+
+    <div class="wrap hero-inner">
+      <p class="eyebrow gold">Lineage Barber Shop / Edgewater</p>
+
+      <h1 id="hero-title">A fresh cut.<br><em>Your next chapter.</em></h1>
+
+      <p class="hero-copy">
+        Fresh fades. Clean cuts. A place to make time for yourself.
+        Step into Lineage at Edgewater Shopping Centre.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="tel:+61862096183">
+          Call the shop <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="btn ghost" href="#visit">
+          Find your way           <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <button class="watch" type="button" data-open-film
+        aria-haspopup="dialog" aria-controls="film-dialog">
+        <span class="play" aria-hidden="true">▶</span>
+        <span class="watch-label">
+          Step inside Lineage
+          <small>Watch the original shop film</small>
+        </span>
+      </button>
+
+      <div class="hero-bottom">
+        <span>1 Wisteria Parade<br>Edgewater, Western Australia</span>
+        <a href="#about">Discover the shop ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ribbon">
+    <div class="wrap ribbon-inner">
+      <span>Fresh fades</span>
+      <i aria-hidden="true">✦</i>
+      <span>Clean cuts</span>
+      <i aria-hidden="true">✦</i>
+      <span>Walk-ins welcome</span>
+      <i aria-hidden="true">✦</i>
+      <span>Edgewater local</span>
+    </div>
+  </div>
+
+  <section class="intro" id="about" aria-labelledby="about-title">
+    <div class="wrap intro-grid">
+      <div class="reveal">
+        <p class="eyebrow gold">Welcome to Lineage</p>
+        <h2 id="about-title">A little time.<br>A <em>fresh perspective.</em></h2>
+        <p class="copy">
+          A familiar style, a cleaner finish or the start of something
+          different. Your next cut starts here, at Lineage Barber Shop
+          in Edgewater Shopping Centre.
+        </p>
+        <p class="copy" style="margin-top:18px">
+          Settle into a leather chair, talk through the look you have
+          in mind and make a little room in your day for yourself.
+          Walk-ins are welcome.
+        </p>
+        <a class="text-link" href="#shop">
+          Take a look inside
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="reveal">
+        <div class="logo-frame">
+          <img src="1000007725.jpg"
+            alt="Lineage Barber logo with a gold crown and scissors, established 2025"
+            width="1536" height="1536" loading="lazy">
+        </div>
+        <div class="logo-caption">
+          <span>Lineage Barber</span>
+          <span>Est. 2025</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services"
+    aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="services-head reveal">
+        <div>
+          <p class="eyebrow">The cut</p>
+          <h2 id="services-title">Find your<br><em>next look.</em></h2>
+        </div>
+        <p>
+          Bring your inspiration or keep it familiar.
+          Speak with the team about your next cut.
+        </p>
+      </div>
+
+      <a class="service reveal" href="tel:+61862096183"
+        aria-label="Call Lineage to ask about fresh fades">
+        <h3>Fresh fades</h3>
+        <p>
+          Want to change up the sides? Talk through the fade and
+          finish you have in mind with your barber.
+        </p>
+        <span class="service-arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="service reveal" href="tel:+61862096183"
+        aria-label="Call Lineage to ask about haircuts">
+        <h3>Clean cuts</h3>
+        <p>
+          Maintain your signature look or bring a reference for
+          something new. Start with a conversation about your style.
+        </p>
+        <span class="service-arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <div class="services-note">
+        <p>For current prices and the full service menu, contact the shop.</p>
+        <a href="tel:+61862096183">Speak to the team — 08 6209 6183</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop" id="shop" aria-labelledby="shop-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow gold">Inside Lineage</p>
+          <h2 id="shop-title">Take a seat.<br><em>Make it your moment.</em></h2>
+        </div>
+        <p class="copy">
+          Warm timber. Gold details. Leather chairs.
+          Take a look around your next stop in Edgewater.
+        </p>
+      </div>
+
+      <figure class="shop-image reveal">
+        <img src="1000007726.jpg"
+          alt="The Lineage shop interior with three brown leather barber chairs, gold frames and arched mirrors"
+          width="1536" height="1152" loading="lazy">
+        <figcaption>
+          <span>Lineage Barber Shop<br>Edgewater Shopping Centre</span>
+          <span>Your next chapter starts here.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="film" id="film" aria-labelledby="film-title">
+    <div class="wrap film-grid">
+      <div class="reveal">
+        <p class="eyebrow gold">The shop film</p>
+        <h2 id="film-title">Meet your<br><em>next barber shop.</em></h2>
+        <p class="copy">
+          A closer look at Lineage. Watch the original opening film
+          and get a feel for the shop before you step through the door.
+        </p>
+
+        <button class="btn ghost" type="button" data-open-film
+          aria-haspopup="dialog" aria-controls="film-dialog">
+          Watch the film
+          <span class="arrow" aria-hidden="true">▶</span>
+        </button>
+
+        <div class="film-meta">
+          <span>Lineage Barber Shop</span>
+          <span>Edgewater, WA</span>
+          <span>Original film</span>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="video-shell">
+          <video id="inline-film" controls playsinline preload="none"
+            poster="1000007725.jpg"
+            aria-label="Lineage Barber Shop opening film">
+            <source src="lineage-barber.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+            <a href="lineage-barber.mp4">Open the film</a>.
+          </video>
+        </div>
+        <p class="video-help">
+          Press play to watch with sound.
+          You can also
+          <a href="https://www.facebook.com/share/v/1Q7RLfLbgU/"
+            target="_blank" rel="noopener noreferrer">watch on Facebook ↗</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-title">
+    <div class="wrap visit-grid">
+      <div class="reveal">
+        <p class="eyebrow gold">Find us in Edgewater</p>
+        <h2 id="visit-title">Your chair<br><em>is this way.</em></h2>
+        <p class="copy">
+          You'll find Lineage at Edgewater Shopping Centre,
+          on Wisteria Parade. Drop in for your next cut or call
+          the team before heading over.
+        </p>
+        <a class="btn"
+          href="https://www.google.com/maps/search/?api=1&amp;query=Lineage+Barber+Shop+1+Wisteria+Parade+Edgewater+WA"
+          target="_blank" rel="noopener noreferrer">
+          Get directions
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="visit-details reveal">
+        <div class="detail">
+          <span class="detail-label">The address</span>
+          <p>Edgewater Shopping Centre<br>1 Wisteria Parade<br>Edgewater, WA</p>
+        </div>
+
+        <div class="detail">
+          <span class="detail-label">The phone</span>
+          <a class="phone" href="tel:+61862096183">08 6209 6183</a>
+          <small>Call for current hours, prices and availability.</small>
+        </div>
+
+        <div class="detail">
+          <span class="detail-label">Your visit</span>
+          <p>Walk-ins welcome</p>
+          <small>
+            Have a particular cut in mind? Bring a reference photo
+            to discuss with your barber.
+          </small>
+        </div>
+
+        <div class="visit-links">
+          <a href="https://www.facebook.com/61583073282992/"
+            target="_blank" rel="noopener noreferrer">Visit Facebook ↗</a>
+          <a href="tel:+61862096183">Call the shop ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div class="reveal">
+        <p class="eyebrow gold">Before you visit</p>
+        <h2 id="faq-title">A few<br><em>good questions.</em></h2>
+      </div>
+
+      <div class="reveal">
+        <details>
+          <summary>Can I walk in?</summary>
+          <p>
+            Yes, Lineage welcomes walk-ins. If you're planning your
+            visit around a busy day, call
+            <a href="tel:+61862096183">08 6209 6183</a>
+            to check availability before you arrive.
+          </p>
+        </details>
+
+        <details>
+          <summary>Where is the shop?</summary>
+          <p>
+            You'll find Lineage Barber Shop at Edgewater Shopping
+            Centre, 1 Wisteria Parade, Edgewater, WA.
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Lineage+Barber+Shop+1+Wisteria+Parade+Edgewater+WA"
+              target="_blank" rel="noopener noreferrer">
+              Open directions in Google Maps</a>.
+          </p>
+        </details>
+
+        <details>
+          <summary>How much is a haircut?</summary>
+          <p>
+            Contact the team for current pricing and the full
+            service menu. Call
+            <a href="tel:+61862096183">08 6209 6183</a>
+            and let them know the cut you're after.
+          </p>
+        </details>
+
+        <details>
+          <summary>What time are you open?</summary>
+          <p>
+            Please check directly with the shop for current opening
+            hours, including public holidays.
+            <a href="tel:+61862096183">Call Lineage</a>
+            before making a special trip.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="brand" href="#home" aria-label="Lineage — back to top">
+        <span class="brand-symbol" aria-hidden="true">♛</span>
+        <span>
+          <span class="brand-name">LINEAGE</span>
+          <span class="brand-sub">Barber Shop · Edgewater</span>
+        </span>
+      </a>
+      <p>A fresh cut. Your next chapter.</p>
+    </div>
+
+    <div class="footer-word" aria-hidden="true">LINEAGE</div>
+
+    <div class="footer-bottom">
+      <span>Lineage Barber Shop · Edgewater, Western Australia</span>
+      <span>Website demo by Competitive Marketing</span>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<nav class="mobile-bar" aria-label="Quick contact">
+  <a href="tel:+61862096183">Call the shop ↗</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Lineage+Barber+Shop+1+Wisteria+Parade+Edgewater+WA"
+    target="_blank" rel="noopener noreferrer">Directions ↗</a>
+</nav>
+
+<dialog id="film-dialog" aria-labelledby="dialog-title">
+  <div class="dialog-head">
+    <span id="dialog-title">Inside Lineage</span>
+    <button class="dialog-close" type="button" id="close-film"
+      aria-label="Close film">Close ✕</button>
+  </div>
+
+  <video id="modal-film" controls playsinline preload="none"
+    aria-label="Lineage Barber Shop opening film">
+    <source src="lineage-barber.mp4" type="video/mp4">
+    Your browser does not support embedded video.
+    <a href="lineage-barber.mp4">Open the film</a>.
+  </video>
+
+  <p class="video-help" style="padding:0 17px 17px">
+    If the film doesn't load,
+    <a href="https://www.facebook.com/share/v/1Q7RLfLbgU/"
+      target="_blank" rel="noopener noreferrer">watch it on Facebook</a>.
+  </p>
+</dialog>
+
+<script>
+(function(){
+  "use strict";
+
+  const menuButton = document.getElementById("menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  function closeMenu(){
+    mobileNav.hidden = true;
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.textContent = "MENU";
+  }
+
+  menuButton.addEventListener("click", function(){
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    mobileNav.hidden = isOpen;
+    menuButton.setAttribute("aria-expanded", String(!isOpen));
+    menuButton.textContent = isOpen ? "MENU" : "CLOSE";
+  });
+
+  mobileNav.querySelectorAll("a").forEach(function(link){
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", function(event){
+    if(event.key === "Escape" && !mobileNav.hidden){
+      closeMenu();
+      menuButton.focus();
+    }
+  });
+
+  const desktopQuery = window.matchMedia("(min-width:761px)");
+  if(desktopQuery.addEventListener){
+    desktopQuery.addEventListener("change", function(event){
+      if(event.matches) closeMenu();
+    });
+  }
+
+  const dialog = document.getElementById("film-dialog");
+  const modalFilm = document.getElementById("modal-film");
+  const inlineFilm = document.getElementById("inline-film");
+  const closeFilmButton = document.getElementById("close-film");
+  let filmTrigger = null;
+
+  function playSafely(video){
+    const result = video.play();
+    if(result && typeof result.catch === "function"){
+      result.catch(function(){
+        /* Native video controls remain available. */
+      });
+    }
+  }
+
+  document.querySelectorAll("[data-open-film]").forEach(function(button){
+    button.addEventListener("click", function(){
+      filmTrigger = button;
+      inlineFilm.pause();
+
+      if(typeof dialog.showModal !== "function"){
+        document.getElementById("film").scrollIntoView();
+        inlineFilm.focus();
+        playSafely(inlineFilm);
+        return;
+      }
+
+      if(!dialog.open) dialog.showModal();
+      document.body.classList.add("modal-open");
+      closeFilmButton.focus();
+      playSafely(modalFilm);
+    });
+  });
+
+  closeFilmButton.addEventListener("click", function(){
+    dialog.close();
+  });
+
+  dialog.addEventListener("click", function(event){
+    const rect = dialog.getBoundingClientRect();
+    const outside =
+      event.clientX < rect.left ||
+      event.clientX > rect.right ||
+      event.clientY < rect.top ||
+      event.clientY > rect.bottom;
+
+    if(event.target === dialog && outside){
+      dialog.close();
+    }
+  });
+
+  dialog.addEventListener("close", function(){
+    modalFilm.pause();
+    document.body.classList.remove("modal-open");
+    if(filmTrigger) filmTrigger.focus();
+  });
+
+  inlineFilm.addEventListener("play", function(){
+    modalFilm.pause();
+  });
+
+  modalFilm.addEventListener("play", function(){
+    inlineFilm.pause();
+  });
+
+  document.addEventListener("visibilitychange", function(){
+    if(document.hidden){
+      inlineFilm.pause();
+      modalFilm.pause();
+    }
+  });
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion:reduce)");
+
+  if("IntersectionObserver" in window && !reducedMotion.matches){
+    const observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold:0.08
+    });
+
+    document.querySelectorAll(".reveal").forEach(function(element){
+      element.classList.add("ready");
+      observer.observe(element);
+    });
+  }
+})();
+</script>
+</body>
+</html>
